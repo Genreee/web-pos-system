@@ -1,0 +1,18 @@
+@use "./style.scss";
+
+.homepage {
+ 
+  background-color: greenyellow;
+
+  .dashboard {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid style.$color-whitesmoke;
+    border-radius: 1em;
+    
+  }
+}

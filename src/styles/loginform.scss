@@ -1,0 +1,103 @@
+@use "./style.scss";
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+
+  .loginform-wrapper {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid style.$color-whitesmoke;
+    border-radius: 1em;
+
+    h1 {
+      padding-top: 0.5em;
+      display: flex;
+      font-size: x-large;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(
+        to right,
+        #fc72ff,
+        #8f68ff,
+        #487bff,
+        #8f68ff,
+        #fc72ff
+      );
+      background-size: 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate-gradient 2.5s linear infinite;
+    }
+    @keyframes animate-gradient {
+      to {
+        background-position: 200%;
+      }
+    }
+
+    .input-box {
+      padding: 0.5em;
+      position: relative;
+      width: 10%;
+    }
+
+    .input-box input {
+      padding-left: 2em;
+      border-radius: 1em;
+    }
+
+    .input-box .username-icon {
+      position: relative;
+      left: 0.6em;
+      top: 1.4em;
+    }
+
+    .input-box .username-icon img {
+      width: 1em;
+      height: 1em;
+    }
+
+    .input-box .password-icon img {
+      position: absolute;
+      left: 1em;
+      top: 5em;
+      transform: translateY(-50%);
+      width: 1em;
+      height: 1em;
+    }
+
+    label {
+      color: style.$color-whitesmoke;
+      font-size: 0.7em;
+      display: flex;
+      accent-color: style.$color-whitesmoke;
+    }
+
+    a {
+      color: style.$color-whitesmoke;
+      text-decoration: underline;
+      font-size: 0.7em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2rem 0 0.2rem 0;
+
+      &:hover {
+        color: red;
+        cursor: pointer;
+      }
+    }
+
+    .login-button {
+      text-transform: uppercase;
+      background-color: style.$color-darkblue;
+      padding: 0 5.8em 0 5.8em;
+      border-radius: 1em;
+    }
+  }
+}
