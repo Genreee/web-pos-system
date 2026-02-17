@@ -3,18 +3,31 @@
 .Navbar {
   display: flex;
   justify-content: center;
-  border: 2px solid style.$color-red;
+  
 
   ul {
     list-style: none;
     display: flex;
-    border: 2px solid style.$color-blue;
+    text-transform: capitalize;
     gap: 1rem;
-    padding: 0 1rem;
+    padding: 1rem;
+    width: 60%;
 
     li {
-      color: red;
-      border: 1px solid white;
+      border: 1px solid style.$color-white;
+      display: flex;
+
+      a {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      img {
+        width: 30%;
+      }
     }
   }
 }
