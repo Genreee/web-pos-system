@@ -4,7 +4,6 @@ import Navbar from "./navbar";
 import Sidebar from "./sidebar";
 import Header from "../login/header";
 
-
 const Dashboard = () => {
   const products = [
     { id: 1, name: "Apple", price: 1.5 },
@@ -64,7 +63,8 @@ const Dashboard = () => {
             </li>
             <li>
               <img src="/salad-icon.jfif" alt="" /> <h2>burger</h2>
-              <span>12.5</span> <button>add to cart</button>
+              <span>12.5</span>
+              <button>add to cart</button>
             </li>
             <li>
               <img src="/salad-icon.jfif" alt="" /> <h2>burger</h2>
@@ -76,6 +76,7 @@ const Dashboard = () => {
             </li>
             <li>
               <img src="/salad-icon.jfif" alt="" /> <h2>burger</h2>
+              <span>12.5</span> <button>add to cart</button>
             </li>
             <li>
               <img src="/salad-icon.jfif" alt="" /> <h2>burger</h2>

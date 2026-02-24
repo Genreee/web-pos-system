@@ -26,37 +26,40 @@ const LoginForm = () => {
           <form onSubmit={handleSubmit}>
             <h1>Log in</h1>
             <div className="input-box">
-              <span className="username-icon">
+              <div className="input-wrapper">
                 <img src="./username-icon.png" alt="" />
-              </span>
-              <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
-              />
-              <div className="input-box"></div>
-              <span className="password-icon">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="input-wrapper">
                 <img src="./password-icon.png" alt="" />
-              </span>
-              <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
             </div>
             <div className="remember-forgot">
               <label>
-                <input type="checkbox" /> &nbsp; Remember me
+                <input type="checkbox" className="checkbox" /> &nbsp; Remember
+                me
               </label>
             </div>
-            <button type="submit" className="login-button">
-              Log in
-            </button>{" "}
-            <br />
+            <div className="button-wrapper">
+              <button type="submit" className="login-button">
+                Log in
+              </button>
+            </div>
+         
             <a href="#">Forgot password?</a>
             <div className="register-link">
               <a href="#">Dont have an account? Register</a>

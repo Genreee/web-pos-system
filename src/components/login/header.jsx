@@ -7,15 +7,27 @@ const Header = () => {
   const getTitle = () => {
     if (location.pathname === "/") return "SmartPOS";
     if (location.pathname === "/homepage") return "Dashboard";
+    if (location.pathname === "/bills") return "Bills";
   };
+  const showSubtitle = location.pathname !== "/";
 
   return (
-    <header className="header-wrapper container">
-      <h1>{getTitle()}</h1>
-      <nav>
-        <Link to="/homepage"></Link>
-      </nav>
-    </header>
+    <div className="header-wrapper container">
+      <div>
+        <h1>{getTitle()}</h1>
+      </div>
+      <div className="cart-wrapper">
+        {showSubtitle && (
+          <div className="button-wrapper">
+         <span>0</span>
+
+            <button>
+              <img src="./shopping-cart.png" alt="" />
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 

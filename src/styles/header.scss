@@ -4,24 +4,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
-  
   h1 {
-    font-size: xx-large;
+    font-size: 3vw; 
     padding: 1rem;
-    background: linear-gradient(to right, #fc72ff, #8f68ff,#487bff, #8f68ff, #fc72ff);
+    background: linear-gradient(
+      to right,
+      #fc72ff,
+      #8f68ff,
+      #487bff,
+      #8f68ff,
+      #fc72ff
+    );
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
-    
-    
   }
-    @keyframes animate-gradient{ 
-      to {
-        background-position: 200%;
-      }
+  @keyframes animate-gradient {
+    to {
+      background-position: 200%;
+    }
+  }
+
+  .cart-wrapper {
+    display: flex;
+    position: absolute;
+    width: 6%;
+    right: 2rem;
+
+    .button-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    span{
+    font-size: 1.5vw;
+    }
     
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0.5em 0.5em 0.5em 0;
+    }
   }
 }

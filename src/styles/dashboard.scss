@@ -14,11 +14,15 @@
         li {
           display: flex;
           flex-direction: column;
-          font-size: x-small;
+          font-size: 1vw;
           text-transform: capitalize;
           align-items: center;
           border: 2px solid whitesmoke;
           width: 20%;
+
+          button{
+            font-size: 1vw;
+          }
         }
       }
     }

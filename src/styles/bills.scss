@@ -1,0 +1,27 @@
+.bills-wrapper {
+  display: flex;
+ 
+  
+  .bills-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        font-size: 1vw;
+        text-transform: capitalize;
+        align-items: center;
+        border: 2px solid whitesmoke;
+        width: 20%;
+      }
+    }
+  }
+}
