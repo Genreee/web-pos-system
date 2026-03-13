@@ -11,7 +11,8 @@ const Bills = () => {
       <div>
         <Header />
         <div className="bills-content">
-          <ul>
+          <h2>invoice list</h2>
+          {/* <ul>
             <li>gagsagsa</li>
             <li>gagsagsa</li>
             <li>gagsagsa</li>
@@ -23,9 +24,8 @@ const Bills = () => {
             <li>gagsagsa</li>
             <li>gagsagsa</li>
             <li>gagsagsa</li>
-            <li>gagsagsa</li>
-           
-          </ul>
+            <li>gagsagsa</li> 
+          </ul>*/}
         </div>
       </div>
     </div>
