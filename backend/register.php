@@ -21,6 +21,8 @@ if (empty($email) || empty($password)) {
     exit();
 }
 
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
 // Check if email already exists
 $stmt = $conn->prepare("SELECT * FROM users WHERE email=?");
 $stmt->bind_param("s", $email);
@@ -34,10 +36,10 @@ if ($result->num_rows > 0) {
 
 // Insert new user
 $insert = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
-$insert->bind_param("ss", $email, $password);
+$insert->bind_param("ss", $email, $hashedPassword);
 if ($insert->execute()) {
     echo json_encode(["status" => "success", "message" => "Account created successfully"]);
 } else {
     echo json_encode(["status" => "error", "message" => "Failed to create account"]);
 }
-?>
+?> 

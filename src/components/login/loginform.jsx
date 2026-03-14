@@ -10,6 +10,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -62,6 +63,7 @@ const LoginForm = () => {
               <div className="input-wrapper">
                 <img src="./password-icon.png" alt="" />
                 <input
+                  className="eye-password"
                   type="password"
                   placeholder="Password"
                   value={password}
@@ -70,11 +72,12 @@ const LoginForm = () => {
                 />
               </div>
             </div>
-            <div className="remember-forgot">
-              {/*   <label>
-                <input type="checkbox" className="checkbox" /> &nbsp; Remember
-                me
+            <div>
+
+              {/*<label>
+                <input type="checkbox" className="checkbox" /> &nbsp; Remember Me?
               </label>*/}
+              
             </div>
             <div className="button-wrapper">
               <button type="submit" className="login-button">
@@ -82,9 +85,11 @@ const LoginForm = () => {
               </button>
             </div>
 
-            {/*  <a href="#">Forgot password?</a>*/}
+            <div className="forgot-password">
+              <Link to="/forgot-password">Forgot password?</Link>
+            </div>
             <div className="register-link">
-              <Link to="/RegisterForm">Dont have an account? Register </Link>
+              <Link to="/RegisterForm">Don't have an account? Register </Link>
             </div>
           </form>
         </div>

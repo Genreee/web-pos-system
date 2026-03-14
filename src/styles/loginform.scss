@@ -65,6 +65,11 @@
     .input-wrapper {
       display: flex;
       align-items: center;
+
+      .eye-password {
+      
+      }
+
       input {
         &::placeholder {
           font-size: small;

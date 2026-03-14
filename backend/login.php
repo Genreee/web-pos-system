@@ -15,13 +15,20 @@ if (!$data) {
 $email = trim($data['email']);
 $password = trim($data['password']);
 
-$stmt = $conn->prepare("SELECT * FROM users WHERE email=? AND password=?");
-$stmt->bind_param("ss", $email, $password);
+// 1️⃣ Get user by email only
+$stmt = $conn->prepare("SELECT * FROM users WHERE email=?");
+$stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
+$user = $result->fetch_assoc();
 
-if ($result->num_rows > 0) {
-    echo json_encode(["status" => "success"]);
+if ($user) {
+    // 2️⃣ Verify hashed password
+    if (password_verify($password, $user['password'])) {
+        echo json_encode(["status" => "success"]);
+    } else {
+        echo json_encode(["status" => "error", "message" => "Invalid Email or Password"]);
+    }
 } else {
     echo json_encode(["status" => "error", "message" => "Invalid Email or Password"]);
 }
