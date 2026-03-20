@@ -2,7 +2,6 @@ import "../../styles/style.scss";
 import "../../styles/loginform.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "./header";
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {
@@ -41,55 +40,52 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
-      <Header />
-      <div className="login-primary-wrapper">
-        <div className="login-form-wrapper">
-          <form onSubmit={handleSubmit}>
-            <h1>Log in</h1>
-            <div className="login-input-wrapper">
-              <div className="login-email-and-password-wrapper">
-                <img src="./username-icon.png" alt="" />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-
-              <div className="login-email-and-password-wrapper">
-                <img src="./password-icon.png" alt="" />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </div>
+    <div className="login-primary-wrapper">
+      <div className="login-form-wrapper">
+        <form onSubmit={handleSubmit}>
+          <h1>Smart POS</h1>
+          <div className="login-input-wrapper">
+            <div className="login-email-and-password-wrapper">
+              <img src="./username-icon.png" alt="" />
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
             </div>
 
-            {/* <label>
+            <div className="login-email-and-password-wrapper">
+              <img src="./password-icon.png" alt="" />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+          </div>
+
+          {/* <label>
         <input type="checkbox" className="checkbox" /> &nbsp; Remember Me?
               </label>*/}
 
-            <div className="login-button-wrapper">
-              <button type="submit" className="login-button">
-                Log in
-              </button>
-            </div>
+          <div className="login-button-wrapper">
+            <button type="submit" className="login-button">
+              Log in
+            </button>
+          </div>
 
-            {/* <div className="forgot-password">
+          {/* <div className="forgot-password">
             <Link to="/forgot-password">Forgot password?</Link>
             </div>*/}
 
-            <div className="register-link">
-              <Link to="/RegisterForm">Don't have an account? Register </Link>
-            </div>
-          </form>
-        </div>
+          <div className="register-link">
+            <Link to="/RegisterForm">Don't have an account? Register </Link>
+          </div>
+        </form>
       </div>
     </div>
   );

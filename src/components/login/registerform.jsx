@@ -24,7 +24,7 @@ const RegisterForm = () => {
       if (data.status === "success") {
         setEmail("");
         setPassword("");
-        // optionally navigate to login page
+        
       }
     } catch (err) {
       console.error("Register error:", err);

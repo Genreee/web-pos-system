@@ -5,15 +5,14 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  
+  border: 2px solid red;
 
   .login-header {
-   
+    border: 2px solid red;
     position: relative;
     left: unset;
     text-align: center;
     font-size: (1.5rem, 4vw, 3rem);
-    
   }
 
   h1 {
