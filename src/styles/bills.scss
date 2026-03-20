@@ -3,8 +3,11 @@
 
   .bills-content {
     display: flex;
-    height:100vh;
-    width: 55.75rem;
+    height: 100vh;
+    width: 45rem;
+    flex: 1;
+    margin-left: 15.625rem;
+    padding: 20px;
     border: 2px solid yellow;
 
     ul {

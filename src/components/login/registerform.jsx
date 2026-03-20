@@ -32,28 +32,42 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="register_wrapper">
-      <form onSubmit={handleRegister}>
-        <div className="form_wrapper">
-          <h1>Register</h1>
+    <div>
+      <div className="register-primary-wrapper">
+        <div className="register-form-wrapper">
+          <form onSubmit={handleRegister}>
+            <h1>Register</h1>
+            <div className="register-input-wrapper">
+              <div className="register-email-and-password-wrapper">
+                <img src="./username-icon.png" alt="" />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
 
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Sign Up</button>
+              <div className="register-email-and-password-wrapper">
+                <img src="./password-icon.png" alt="" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+            <div className="register-button-wrapper">
+              <button type="submit" className="register-button">
+                Sign Up
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

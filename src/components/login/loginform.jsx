@@ -10,7 +10,6 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -44,12 +43,12 @@ const LoginForm = () => {
   return (
     <div>
       <Header />
-      <div className="login-wrapper">
-        <div className="loginform-wrapper">
+      <div className="login-primary-wrapper">
+        <div className="login-form-wrapper">
           <form onSubmit={handleSubmit}>
             <h1>Log in</h1>
-            <div className="input-box">
-              <div className="input-wrapper">
+            <div className="login-input-wrapper">
+              <div className="login-email-and-password-wrapper">
                 <img src="./username-icon.png" alt="" />
                 <input
                   type="email"
@@ -60,10 +59,9 @@ const LoginForm = () => {
                 />
               </div>
 
-              <div className="input-wrapper">
+              <div className="login-email-and-password-wrapper">
                 <img src="./password-icon.png" alt="" />
                 <input
-                  className="eye-password"
                   type="password"
                   placeholder="Password"
                   value={password}
@@ -72,22 +70,21 @@ const LoginForm = () => {
                 />
               </div>
             </div>
-            <div>
 
-              {/*<label>
-                <input type="checkbox" className="checkbox" /> &nbsp; Remember Me?
+            {/* <label>
+        <input type="checkbox" className="checkbox" /> &nbsp; Remember Me?
               </label>*/}
-              
-            </div>
-            <div className="button-wrapper">
+
+            <div className="login-button-wrapper">
               <button type="submit" className="login-button">
                 Log in
               </button>
             </div>
 
-            <div className="forgot-password">
-              <Link to="/forgot-password">Forgot password?</Link>
-            </div>
+            {/* <div className="forgot-password">
+            <Link to="/forgot-password">Forgot password?</Link>
+            </div>*/}
+
             <div className="register-link">
               <Link to="/RegisterForm">Don't have an account? Register </Link>
             </div>

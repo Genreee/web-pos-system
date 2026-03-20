@@ -4,7 +4,9 @@
   display: flex;
   background-color: black;
   width: 20%;
-  border: 2px solid red;
+ position: fixed;
+ height: 100vh;
+
 
   ul {
     list-style: none;

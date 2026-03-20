@@ -3,6 +3,7 @@ import "../../styles/dashboard.scss";
 import Navbar from "./navbar";
 import Sidebar from "./sidebar";
 import Header from "../login/header";
+import CartButton from "./cartbutton";
 
 const Dashboard = () => {
  
@@ -10,6 +11,7 @@ const Dashboard = () => {
   return (
     <div className="homepage-wrapper">
       <Sidebar />
+      <CartButton/>
 
       <div className="homepage container">
         <Header />

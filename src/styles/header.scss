@@ -5,9 +5,21 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  
+
+  .login-header {
+   
+    position: relative;
+    left: unset;
+    text-align: center;
+    font-size: (1.5rem, 4vw, 3rem);
+    
+  }
 
   h1 {
-    font-size: 3vw; 
+    position: fixed;
+    left: 35rem;
+    font-size: (1.5rem, 4vw, 3rem);
     padding: 1rem;
     background: linear-gradient(
       to right,
@@ -26,29 +38,6 @@
   @keyframes animate-gradient {
     to {
       background-position: 200%;
-    }
-  }
-
-  .cart-wrapper {
-    display: flex;
-    position: absolute;
-    width: 6%;
-    right: 2rem;
-
-    .button-wrapper {
-      display: flex;
-      align-items: center;
-    }
-
-    span{
-    font-size: 1.5vw;
-    }
-    
-    button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0.5em 0.5em 0.5em 0;
     }
   }
 }

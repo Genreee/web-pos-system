@@ -4,29 +4,37 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
+
+  const isHome = location.pathname === "/";
+  const isMenu = location.pathname === "/homepage";
+   const bills = location.pathname === "/bills";
+
   const getTitle = () => {
     if (location.pathname === "/") return "SmartPOS";
-    if (location.pathname === "/homepage") return "Dashboard";
+    if (location.pathname === "/homepage") return "Menu";
     if (location.pathname === "/bills") return "Bills";
+    return "SmartPOS";
   };
-  const showSubtitle = location.pathname !== "/";
 
+  
   return (
     <div className="header-wrapper container">
-      <div>
-        <h1>{getTitle()}</h1>
-      </div>
-      <div className="cart-wrapper">
-        {showSubtitle && (
-          <div className="button-wrapper">
-         <span>0</span>
+      {isHome && (
+        <div>
+          <h1 className="login-header">{getTitle()}</h1>
+        </div>
+      )}
 
-            <button>
-              <img src="./shopping-cart.png" alt="" />
-            </button>
-          </div>
-        )}
-      </div>
+      {isMenu && (
+        <div className="dashboard-header">
+          <h1>{getTitle()}</h1>
+        </div>
+      )}
+      {bills && (
+        <div className="dashboard-header">
+          <h1>{getTitle()}</h1>
+        </div>
+      )}
     </div>
   );
 };
