@@ -1,4 +1,4 @@
-import "../../styles/registerform.scss";
+import "../../styles/auth/registerform.scss";
 import { useState } from "react";
 
 const RegisterForm = () => {
@@ -24,7 +24,6 @@ const RegisterForm = () => {
       if (data.status === "success") {
         setEmail("");
         setPassword("");
-        
       }
     } catch (err) {
       console.error("Register error:", err);
@@ -36,7 +35,10 @@ const RegisterForm = () => {
       <div className="register-primary-wrapper">
         <div className="register-form-wrapper">
           <form onSubmit={handleRegister}>
-            <h1>Register</h1>
+            <div className="register-label-wrapper">
+              <h1>Smart POS</h1>
+              <p>Create an account</p>
+            </div>
             <div className="register-input-wrapper">
               <div className="register-email-and-password-wrapper">
                 <img src="./username-icon.png" alt="" />

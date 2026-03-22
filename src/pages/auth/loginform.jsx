@@ -1,5 +1,5 @@
 import "../../styles/style.scss";
-import "../../styles/loginform.scss";
+import "../../styles/auth/loginform.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -43,7 +43,10 @@ const LoginForm = () => {
     <div className="login-primary-wrapper">
       <div className="login-form-wrapper">
         <form onSubmit={handleSubmit}>
-          <h1>Smart POS</h1>
+          <div className="login-label-wrapper">
+            <h1>Smart POS</h1>
+            <p>Login to your account</p>
+          </div>
           <div className="login-input-wrapper">
             <div className="login-email-and-password-wrapper">
               <img src="./username-icon.png" alt="" />

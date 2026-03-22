@@ -10,7 +10,7 @@ const Header = () => {
    const bills = location.pathname === "/bills";
 
   const getTitle = () => {
-    if (location.pathname === "/") return "SmartPOS";
+   
     if (location.pathname === "/homepage") return "Menu";
     if (location.pathname === "/bills") return "Bills";
     return "SmartPOS";
@@ -19,12 +19,7 @@ const Header = () => {
   
   return (
     <div className="header-wrapper container">
-      {isHome && (
-        <div>
-          <h1 className="login-header">{getTitle()}</h1>
-        </div>
-      )}
-
+    
       {isMenu && (
         <div className="dashboard-header">
           <h1>{getTitle()}</h1>

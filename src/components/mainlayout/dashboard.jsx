@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <div className="homepage-wrapper">
       <Sidebar />
-      <CartButton/>
+      <CartButton />
 
       <div className="homepage container">
         <Header />
