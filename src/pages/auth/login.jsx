@@ -1,5 +1,4 @@
-import "../../styles/style.scss";
-import "../../styles/auth/loginform.scss";
+import "../../styles/auth/login.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -86,7 +85,7 @@ const LoginForm = () => {
             </div>*/}
 
           <div className="register-link">
-            <Link to="/RegisterForm">Don't have an account? Register </Link>
+            <Link to="/Register">Don't have an account? Register </Link>
           </div>
         </form>
       </div>

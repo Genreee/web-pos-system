@@ -23,7 +23,7 @@ $color-darkblue: darkblue;
 body {
   background-color: $color-black;
   color: $color-white;
-   background-image: url("/background.jfif");
+  background-image: url("/background.jfif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,17 +32,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
-.container {
-  margin-bottom: 1rem;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-x: hidden;
-  
-}
-
-
 
 img,
 picture,
@@ -54,19 +43,4 @@ svg {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-}
-
-button {
-  display: inline-block;
-  padding: 0.5em;
-  background-color: $color-lightblue;
-  color: $color-white;
-  cursor: pointer;
-
-}
-
-a {
-  text-decoration: none;
-  color: $color-white;
-  cursor: default;
 }

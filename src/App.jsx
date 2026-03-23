@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginForm from "./pages/auth/loginform";
-import RegisterForm from "./pages/auth/registerform";
-import Dashboard from "./components/mainlayout/dashboard";
-import Bills from "./components/mainlayout/bills";
+import LoginForm from "./pages/auth/login";
+import RegisterForm from "./pages/auth/register";
+import HomePage from "./pages/main/homepage";
+/*import Bills from "./components/mainlayout/bills";
 import Items from "./components/mainlayout/items";
-import CartButton from "./components/mainlayout/cartbutton";
+import CartButton from "./components/mainlayout/cartbutton";*/
 
 
 function App() {
@@ -12,11 +12,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginForm />} />
-        <Route path="/homepage" element={<Dashboard />} />
-        <Route path="/bills" element={<Bills />} />
-        <Route path="/registerform" element={<RegisterForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/homepage" element={<HomePage />} />
+       {/* <Route path="/bills" element={<Bills />} />
         <Route path="/items" element={<Items />} />
-        <Route path="/cartbutton" element={<CartButton />} />
+        <Route path="/cartbutton" element={<CartButton />} />*/}
       </Routes>
     </BrowserRouter>
   );

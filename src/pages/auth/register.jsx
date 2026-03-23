@@ -1,5 +1,6 @@
-import "../../styles/auth/registerform.scss";
+import "../../styles/auth/register.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
@@ -66,6 +67,10 @@ const RegisterForm = () => {
               <button type="submit" className="register-button">
                 Sign Up
               </button>
+            </div>
+
+            <div className="back-link">
+              <Link to="/">Back to Login </Link>
             </div>
           </form>
         </div>
